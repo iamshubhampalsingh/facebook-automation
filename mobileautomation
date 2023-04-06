@@ -1,0 +1,32 @@
+#1
+import uiautomator2 as u2
+import time
+d =u2.connect('85JB8PV8XOVW4XM7')
+d(text="Play Store").click()
+time.sleep(2)
+d(text="Search for apps & games").click()
+time.sleep(2)
+d(text="Search for apps & games").set_text("facebook")
+
+#2
+import uiautomator2 as u2
+import time
+d =u2.connect('85JB8PV8XOVW4XM7')
+d(text="Facebook").click()
+time.sleep(2)
+d(resourceId="com.facebook.katana:id/(name removed)", description="Menu, tab 6 of 6").click()
+time.sleep(2)
+d(description="Settings").click()
+time.sleep(2)
+
+#3
+import uiautomator2 as u2
+import time
+d =u2.connect('85JB8PV8XOVW4XM7')
+d(text="Facebook").long_click()
+time.sleep(2)
+d.xpath('//*[@resource-id="com.android.launcher3:id/popup_container"]/android.widget.FrameLayout[1]').click()
+time.sleep(2)
+d(resourceId="com.android.settings:id/button2").click()
+time.sleep(2)
+d(resourceId="android:id/button1").click()
